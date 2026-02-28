@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyankunja English School (GKES) | Gaindakot, Nepal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gkes: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                800: "#1e40af",
+                900: "#1e3a8a",
+                950: "#172554",
+              },
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Montserrat"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white text-slate-700 font-sans leading-relaxed">
+    <!-- Top Bar - Hidden on mobile for less clutter -->
+    <div
+      class="hidden md:flex bg-gkes-950 text-white py-2 px-4 md:px-12 text-sm justify-between items-center border-b border-white/10"
+    >
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2 opacity-90">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 text-blue-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          Gaindakot-8, Nawalpur, Nepal
+        </span>
+        <span class="flex items-center gap-2 opacity-90">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 text-blue-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            />
+          </svg>
+          +977-78-501xxx
+        </span>
+      </div>
+      <div class="flex items-center gap-6">
+        <span class="font-semibold text-blue-100">Est. 2063 B.S.</span>
+        <span class="h-4 w-[1px] bg-white/20"></span>
+        <span class="italic text-blue-200 font-serif text-[13px]"
+          >Managed by GES since 2082 B.S.</span
+        >
+      </div>
+    </div>
+
+    <!-- Navigation - Compact on mobile -->
+    <nav
+      class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100"
+    >
+      <div
+        class="container mx-auto px-4 md:px-12 py-3 md:py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="images/gkes-logo.png"
+            alt="GKES Logo"
+            class="h-10 md:h-16 object-contain"
+          />
+          <div>
+            <h1
+              class="text-base md:text-2xl font-serif font-bold text-gkes-900 leading-tight"
+            >
+              Gyankunja English School
+            </h1>
+            <p
+              class="text-[8px] md:text-xs uppercase tracking-[0.15em] md:tracking-[0.25em] text-gkes-700 font-bold"
+            >
+              Gaindakot, Nepal
+            </p>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div
+          class="hidden lg:flex items-center gap-8 font-bold text-slate-700 tracking-wide text-sm uppercase"
+        >
+          <a href="#home" class="nav-link hover:text-gkes-900">Home</a>
+          <a href="#about" class="nav-link hover:text-gkes-900">About</a>
+          <a href="#message" class="nav-link hover:text-gkes-900">Principal</a>
+          <a href="#academics" class="nav-link hover:text-gkes-900"
+            >Academics</a
+          >
+          <a href="#events" class="nav-link hover:text-gkes-900">Events</a>
+          <a href="#contact" class="btn-primary !px-6 !py-2.5">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="menuToggle"
+          class="lg:hidden text-gkes-900 p-1.5 border border-slate-200 rounded-md"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-white border-t border-slate-100 p-6 flex flex-col gap-4 shadow-2xl absolute w-full top-full left-0"
+      >
+        <a
+          href="#home"
+          class="text-gkes-950 font-bold border-b border-slate-50 pb-2"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="text-gkes-950 font-bold border-b border-slate-50 pb-2"
+          >About Us</a
+        >
+        <a
+          href="#message"
+          class="text-gkes-950 font-bold border-b border-slate-50 pb-2"
+          >Principal's Message</a
+        >
+        <a
+          href="#academics"
+          class="text-gkes-950 font-bold border-b border-slate-50 pb-2"
+          >Academics</a
+        >
+        <a
+          href="#events"
+          class="text-gkes-950 font-bold border-b border-slate-50 pb-2"
+          >Events</a
+        >
+        <a href="#contact" class="btn-primary text-center mt-2">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section - More compact on mobile -->
+    <header
+      id="home"
+      class="hero-section relative min-h-[75vh] md:min-h-[85vh] flex items-center justify-center text-center text-white px-4 overflow-hidden"
+    >
+      <div class="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
+        <span
+          class="inline-block px-3 py-1.5 md:px-5 md:py-2 bg-blue-600/30 backdrop-blur-md border border-white/20 rounded-full text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase"
+        >
+          Excellence Since 2063 B.S.
+        </span>
+        <h2
+          class="text-3xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.15]"
+        >
+          A Place Where <span class="italic text-blue-300">Learning</span> Meets
+          Inspiration
+        </h2>
+        <p
+          class="text-base md:text-xl text-blue-50 font-light max-w-2xl mx-auto leading-relaxed"
+        >
+          Nurturing young minds with quality education, strong values, and a
+          vision for the future.
+        </p>
+        <div
+          class="pt-6 md:pt-10 flex flex-col sm:flex-row justify-center gap-3 md:gap-5"
+        >
+          <a href="#about" class="btn-white !py-3 md:!py-4">Discover More</a>
+          <a href="#contact" class="btn-outline-white !py-3 md:!py-4"
+            >Apply Now</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block"
+      >
+        <a
+          href="#about"
+          class="text-white/70 hover:text-white transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- About Section - Streamlined for mobile -->
+    <section id="about" class="py-12 md:py-24 bg-slate-50">
+      <div class="container mx-auto px-4 md:px-12">
+        <div class="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
+          <!-- Image - Smaller on mobile -->
+          <div class="relative order-2 lg:order-1">
+            <div
+              class="aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-2xl md:rounded-3xl shadow-xl relative z-10 border-4 md:border-8 border-white"
+            >
+              <img
+                src="images/gkes-poster.jpg"
+                alt="About GKES"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute -top-4 -left-4 bg-white p-4 md:p-6 shadow-xl rounded-xl border border-slate-100 hidden md:block z-20"
+            >
+              <p
+                class="text-gkes-900 font-serif font-bold text-3xl md:text-4xl"
+              >
+                2063
+              </p>
+              <p
+                class="text-slate-600 text-[10px] font-bold uppercase tracking-wider"
+              >
+                Established
+              </p>
+            </div>
+          </div>
+          <!-- Content -->
+          <div class="space-y-6 md:space-y-8 order-1 lg:order-2">
+            <div>
+              <span
+                class="text-gkes-800 font-bold tracking-[0.2em] uppercase text-xs mb-3 block"
+                >Our Heritage</span
+              >
+              <h3
+                class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-900 leading-tight"
+              >
+                Founded on Values, Driven by Excellence
+              </h3>
+            </div>
+            <p class="text-base md:text-lg text-slate-700 leading-relaxed">
+              Established in 2063 B.S., Gyankunja English School has been a
+              cornerstone of academic excellence in Gaindakot for over two
+              decades.
+            </p>
+            <div
+              class="p-5 md:p-8 bg-white border border-slate-200 rounded-2xl shadow-sm border-l-4 border-l-gkes-900"
+            >
+              <h4 class="text-lg md:text-xl font-bold text-gkes-950 mb-2">
+                New Era of Excellence
+              </h4>
+              <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                In 2082 B.S., GKES was acquired by
+                <strong>Gaindakot English School (GES)</strong>, ensuring
+                continued quality education with enhanced resources.
+              </p>
+            </div>
+            <!-- Mobile: show badges, desktop: show detailed features -->
+            <div class="flex flex-wrap gap-3 md:hidden">
+              <span
+                class="px-3 py-1.5 bg-gkes-50 text-gkes-900 rounded-full text-xs font-bold"
+                >Expert Leadership</span
+              >
+              <span
+                class="px-3 py-1.5 bg-gkes-50 text-gkes-900 rounded-full text-xs font-bold"
+                >Global Standards</span
+              >
+              <span
+                class="px-3 py-1.5 bg-gkes-50 text-gkes-900 rounded-full text-xs font-bold"
+                >Managed by GES</span
+              >
+            </div>
+            <div class="hidden md:grid grid-cols-2 gap-6">
+              <div class="flex items-start gap-3">
+                <div class="mt-1 p-1 bg-gkes-100 rounded-full text-gkes-900">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900">Expert Leadership</h5>
+                  <p class="text-slate-600 text-sm">
+                    Managed by top educators from GES.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="mt-1 p-1 bg-gkes-100 rounded-full text-gkes-900">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900">Global Standards</h5>
+                  <p class="text-slate-600 text-sm">
+                    Enhanced curriculum and methods.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principal's Message Section - Collapsible on mobile -->
+    <section
+      id="message"
+      class="py-12 md:py-20 bg-gkes-950 text-white relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 md:px-12 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-8 md:gap-16 items-center">
+          <!-- Principal Photo - Compact on mobile -->
+          <div class="lg:w-5/12 text-center">
+            <div class="relative inline-block">
+              <img
+                src="images/principal-gkes.jpg"
+                alt="Principal Hiralal Aryal"
+                class="rounded-xl md:rounded-2xl shadow-2xl w-32 h-32 md:w-full md:h-auto md:max-w-xs mx-auto object-cover border-2 md:border-4 border-white/10"
+              />
+              <div
+                class="mt-4 md:mt-8 md:bg-white/5 md:backdrop-blur-sm md:p-5 md:rounded-xl md:border md:border-white/10"
+              >
+                <h4
+                  class="text-xl md:text-2xl font-serif font-bold text-blue-100"
+                >
+                  Hiralal Aryal
+                </h4>
+                <p
+                  class="text-blue-400 font-bold tracking-[0.15em] uppercase text-[10px] md:text-xs mt-1"
+                >
+                  Principal, GKES
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Content with Read More on mobile -->
+          <div class="lg:w-7/12 space-y-5 md:space-y-8">
+            <h3
+              class="text-2xl md:text-4xl font-serif font-bold italic leading-tight text-blue-50 text-center lg:text-left"
+            >
+              Message from the Principal
+            </h3>
+
+            <!-- Mobile: Truncated message with Read More -->
+            <div class="md:hidden">
+              <div
+                id="principalMessageShort"
+                class="text-blue-100/90 text-base leading-relaxed space-y-4"
+              >
+                <p>Dear Guardians and Students,</p>
+                <p>
+                  It gives me great pleasure to share a few words about our
+                  vision at Gyankunja English School (GKES). Our mission is to
+                  empower students and help them achieve their full potential...
+                </p>
+              </div>
+              <div
+                id="principalMessageFull"
+                class="hidden text-blue-100/90 text-base leading-relaxed space-y-4"
+              >
+                <p>Dear Guardians and Students,</p>
+                <p>
+                  It gives me great pleasure to share a few words about our
+                  vision at Gyankunja English School (GKES). Our mission is to
+                  empower students and help them achieve their full potential.
+                  Education today goes beyond acquiring knowledge - it includes
+                  building character, developing skills, and preparing students
+                  for a successful future.
+                </p>
+                <p>
+                  In this rapidly changing global world, exposure to diverse
+                  learning experiences is essential. We strive to nurture
+                  discipline, compassion, respect for culture, social
+                  responsibility, and leadership qualities in our students,
+                  helping them grow into confident and capable individuals.
+                </p>
+                <p>
+                  At GKES, we are committed to creating a supportive environment
+                  of mutual respect, cooperation, and excellence. With the
+                  combined efforts of students, guardians, and teachers, we are
+                  confident that our learners will achieve all-round development
+                  and contribute positively to society and the nation.
+                </p>
+                <p class="pt-2 font-serif italic text-blue-200">
+                  — Hiralal Aryal, Principal
+                </p>
+              </div>
+              <button
+                id="readMoreBtn"
+                class="mt-4 text-blue-400 font-bold text-sm flex items-center gap-2 mx-auto"
+              >
+                <span>Read Full Message</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Desktop: Full message -->
+            <div
+              class="hidden md:block space-y-6 text-blue-100/90 text-lg font-light leading-relaxed"
+            >
+              <p>Dear Guardians and Students,</p>
+              <p>
+                It gives me great pleasure to share a few words about our vision
+                at Gyankunja English School (GKES). Our mission is to empower
+                students and help them achieve their full potential. Education
+                today goes beyond acquiring knowledge - it includes building
+                character, developing skills, and preparing students for a
+                successful future.
+              </p>
+              <p>
+                In this rapidly changing global world, exposure to diverse
+                learning experiences is essential. We strive to nurture
+                discipline, compassion, respect for culture, social
+                responsibility, and leadership qualities in our students,
+                helping them grow into confident and capable individuals.
+              </p>
+              <p>
+                At GKES, we are committed to creating a supportive environment
+                of mutual respect, cooperation, and excellence. With the
+                combined efforts of students, guardians, and teachers, we are
+                confident that our learners will achieve all-round development
+                and contribute positively to society and the nation.
+              </p>
+            </div>
+            <div class="hidden md:block pt-6 border-t border-white/10">
+              <p class="text-xl font-serif italic text-blue-200">
+                Hiralal Aryal
+              </p>
+              <p
+                class="text-sm uppercase tracking-widest font-bold text-blue-400 mt-1"
+              >
+                Principal, Gyankunja English School
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section - Horizontal scroll on mobile -->
+    <section class="py-12 md:py-20 bg-white overflow-hidden">
+      <div class="container mx-auto px-4 md:px-12">
+        <div class="text-center mb-8 md:mb-14">
+          <span
+            class="text-gkes-800 font-bold tracking-[0.2em] uppercase text-xs mb-3 block"
+            >Our Foundation</span
+          >
+          <h3
+            class="text-2xl md:text-4xl font-serif font-bold text-slate-900 section-heading"
+          >
+            Our Core Values
+          </h3>
+        </div>
+
+        <!-- Mobile: Full-width swipeable cards with pagination dots -->
+        <div class="md:hidden">
+          <div
+            id="valuesCarousel"
+            class="overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4"
+          >
+            <div class="flex">
+              <div class="w-full flex-shrink-0 snap-center px-2">
+                <div class="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                  <img
+                    src="images/academic-gkes.jpg"
+                    alt="Academic Excellence"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-gkes-950/95 via-gkes-950/60 to-gkes-950/30"
+                  ></div>
+                  <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h4 class="text-xl font-bold text-white mb-2">
+                      Academic Excellence
+                    </h4>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                      Rigorous academic programs designed to challenge and
+                      inspire students to achieve their best.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex-shrink-0 snap-center px-2">
+                <div class="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                  <img
+                    src="images/character-gkes.jpg"
+                    alt="Character Building"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-gkes-950/95 via-gkes-950/60 to-gkes-950/30"
+                  ></div>
+                  <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h4 class="text-xl font-bold text-white mb-2">
+                      Character Building
+                    </h4>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                      Instilling values of discipline, respect, and social
+                      responsibility in every student.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex-shrink-0 snap-center px-2">
+                <div class="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                  <img
+                    src="images/global-gkes.jpg"
+                    alt="Global Perspective"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-gkes-950/95 via-gkes-950/60 to-gkes-950/30"
+                  ></div>
+                  <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h4 class="text-xl font-bold text-white mb-2">
+                      Global Perspective
+                    </h4>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                      Preparing students for a globalized world with modern
+                      methodology and diverse experiences.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination Dots -->
+          <div class="flex justify-center gap-2 mt-5">
+            <button
+              class="carousel-dot w-2.5 h-2.5 rounded-full bg-gkes-900 transition-all"
+              data-index="0"
+            ></button>
+            <button
+              class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"
+              data-index="1"
+            ></button>
+            <button
+              class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"
+              data-index="2"
+            ></button>
+          </div>
+        </div>
+
+        <!-- Desktop: Grid -->
+        <div class="hidden md:grid md:grid-cols-3 gap-8">
+          <div
+            class="group relative rounded-3xl overflow-hidden aspect-[4/3] shadow-lg hover:shadow-xl transition-all"
+          >
+            <img
+              src="images/academic-gkes.jpg"
+              alt="Academic Excellence"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gkes-950/95 via-gkes-950/50 to-transparent"
+            ></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <h4 class="text-2xl font-bold text-white mb-3">
+                Academic Excellence
+              </h4>
+              <p class="text-blue-100 leading-relaxed">
+                Rigorous academic programs designed to challenge and inspire
+                students to achieve their best results.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative rounded-3xl overflow-hidden aspect-[4/3] shadow-lg hover:shadow-xl transition-all"
+          >
+            <img
+              src="images/character-gkes.jpg"
+              alt="Character Building"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gkes-950/95 via-gkes-950/50 to-transparent"
+            ></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <h4 class="text-2xl font-bold text-white mb-3">
+                Character Building
+              </h4>
+              <p class="text-blue-100 leading-relaxed">
+                Instilling values of discipline, respect, and social
+                responsibility to create compassionate leaders.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative rounded-3xl overflow-hidden aspect-[4/3] shadow-lg hover:shadow-xl transition-all"
+          >
+            <img
+              src="images/global-gkes.jpg"
+              alt="Global Perspective"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gkes-950/95 via-gkes-950/50 to-transparent"
+            ></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <h4 class="text-2xl font-bold text-white mb-3">
+                Global Perspective
+              </h4>
+              <p class="text-blue-100 leading-relaxed">
+                Preparing students for a globalized world through diverse
+                learning experiences and modern methodology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-12 md:py-20 bg-gkes-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-white rounded-full translate-x-1/3 translate-y-1/3"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-12 relative z-10">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10 md:mb-16">
+                <div>
+                    <span class="text-blue-400 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Learning Paths</span>
+                    <h3 class="text-2xl md:text-4xl font-serif font-bold">Our Academics</h3>
+                </div>
+                <p class="text-blue-100/70 max-w-md mt-4 lg:mt-0 text-sm md:text-base">Building strong foundations from early years through secondary education.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 md:gap-0">
+                <!-- Primary Level -->
+                <div class="flex-1 md:pr-8 lg:pr-16">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-white text-gkes-900 rounded-2xl flex items-center justify-center font-serif font-bold text-2xl md:text-3xl shadow-lg">
+                            P
+                        </div>
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-serif font-bold">Primary Level</h4>
+                            <p class="text-blue-300 text-sm font-bold">LKG - Class 5</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100/80 mb-6 text-sm md:text-base leading-relaxed">Building curiosity and confidence through play-based learning, creative expression, and foundational academics.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-blue-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <span class="text-white font-medium text-sm">Child-centric learning environment</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-blue-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                            </div>
+                            <span class="text-white font-medium text-sm">Creative arts & activities</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-blue-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" /></svg>
+                            </div>
+                            <span class="text-white font-medium text-sm">Strong language foundation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="hidden md:block w-px bg-white/20 mx-4 lg:mx-8"></div>
+                <div class="md:hidden h-px bg-white/20 my-4"></div>
+
+                <!-- Secondary Level -->
+                <div class="flex-1 md:pl-8 lg:pl-16">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-blue-500 text-white rounded-2xl flex items-center justify-center font-serif font-bold text-2xl md:text-3xl shadow-lg">
+                            S
+                        </div>
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-serif font-bold">Secondary Level</h4>
+                            <p class="text-blue-300 text-sm font-bold">Class 6 - 10</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100/80 mb-6 text-sm md:text-base leading-relaxed">Preparing students for academic excellence and success in SEE examinations with focused subject mastery.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/30 flex items-center justify-center text-blue-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                            </div>
+                            <span class="text-white font-medium text-sm">Science & IT laboratories</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/30 flex items-center justify-center text-blue-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <span class="text-white font-medium text-sm">Leadership development</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/30 flex items-center justify-center text-blue-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                            </div>
+                            <span class="text-white font-medium text-sm">SEE preparation support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-12 md:py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-12">
+        <div class="mb-8 md:mb-14">
+          <span
+            class="text-gkes-800 font-bold tracking-[0.2em] uppercase text-xs mb-3 block"
+            >School Life</span
+          >
+          <h3 class="text-2xl md:text-4xl font-serif font-bold text-slate-900">
+            School Events
+          </h3>
+        </div>
+
+        <!-- Events Horizontal Scroll -->
+        <div class="overflow-x-auto scrollbar-hide -mx-4 px-4">
+          <div class="flex gap-4 pb-4" style="width: max-content">
+            <a
+              href="events/sports-day-2082.html"
+              class="group relative overflow-hidden rounded-xl md:rounded-2xl shadow-lg w-[200px] md:w-[280px] flex-shrink-0"
+            >
+              <div class="aspect-[3/4]">
+                <img
+                  src="images/sports-gkes.jpg"
+                  alt="Sports Day 2082"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gkes-950/90 via-gkes-950/30 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-3 md:bottom-5 left-3 md:left-4 right-3 md:right-4"
+              >
+                <span
+                  class="inline-block px-2 py-0.5 bg-white/20 backdrop-blur-sm rounded text-[8px] md:text-[10px] text-white font-bold uppercase tracking-wider mb-1.5"
+                  >Sports</span
+                >
+                <h5
+                  class="text-white text-sm md:text-base font-bold leading-tight"
+                >
+                  Sports Day 2082
+                </h5>
+              </div>
+            </a>
+            <a
+              href="events/saraswati-puja.html"
+              class="group relative overflow-hidden rounded-xl md:rounded-2xl shadow-lg w-[200px] md:w-[280px] flex-shrink-0"
+            >
+              <div class="aspect-[3/4]">
+                <img
+                  src="images/saraswati-puja-gkes.jpg"
+                  alt="Saraswati Puja"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gkes-950/90 via-gkes-950/30 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-3 md:bottom-5 left-3 md:left-4 right-3 md:right-4"
+              >
+                <span
+                  class="inline-block px-2 py-0.5 bg-white/20 backdrop-blur-sm rounded text-[8px] md:text-[10px] text-white font-bold uppercase tracking-wider mb-1.5"
+                  >Cultural</span
+                >
+                <h5
+                  class="text-white text-sm md:text-base font-bold leading-tight"
+                >
+                  Saraswati Puja
+                </h5>
+              </div>
+            </a>
+            <a
+              href="events/asadh-15.html"
+              class="group relative overflow-hidden rounded-xl md:rounded-2xl shadow-lg w-[200px] md:w-[280px] flex-shrink-0"
+            >
+              <div class="aspect-[3/4]">
+                <img
+                  src="images/asadh15-gkes.jpg"
+                  alt="Asadh 15"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gkes-950/90 via-gkes-950/30 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-3 md:bottom-5 left-3 md:left-4 right-3 md:right-4"
+              >
+                <span
+                  class="inline-block px-2 py-0.5 bg-white/20 backdrop-blur-sm rounded text-[8px] md:text-[10px] text-white font-bold uppercase tracking-wider mb-1.5"
+                  >National</span
+                >
+                <h5
+                  class="text-white text-sm md:text-base font-bold leading-tight"
+                >
+                  Asadh 15
+                </h5>
+              </div>
+            </a>
+            <a
+              href="events/krishna-janmashtami.html"
+              class="group relative overflow-hidden rounded-xl md:rounded-2xl shadow-lg w-[200px] md:w-[280px] flex-shrink-0"
+            >
+              <div class="aspect-[3/4]">
+                <img
+                  src="images/gkes-poster.jpg"
+                  alt="Krishna Janmashtami"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gkes-950/90 via-gkes-950/30 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-3 md:bottom-5 left-3 md:left-4 right-3 md:right-4"
+              >
+                <span
+                  class="inline-block px-2 py-0.5 bg-white/20 backdrop-blur-sm rounded text-[8px] md:text-[10px] text-white font-bold uppercase tracking-wider mb-1.5"
+                  >Cultural</span
+                >
+                <h5
+                  class="text-white text-sm md:text-base font-bold leading-tight"
+                >
+                  Krishna Janmashtami
+                </h5>
+              </div>
+            </a>
+            <a
+              href="events/environment-day.html"
+              class="group relative overflow-hidden rounded-xl md:rounded-2xl shadow-lg w-[200px] md:w-[280px] flex-shrink-0"
+            >
+              <div class="aspect-[3/4]">
+                <img
+                  src="images/asadh15-gkes.jpg"
+                  alt="Environment Day"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gkes-950/90 via-gkes-950/30 to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-3 md:bottom-5 left-3 md:left-4 right-3 md:right-4"
+              >
+                <span
+                  class="inline-block px-2 py-0.5 bg-white/20 backdrop-blur-sm rounded text-[8px] md:text-[10px] text-white font-bold uppercase tracking-wider mb-1.5"
+                  >Awareness</span
+                >
+                <h5
+                  class="text-white text-sm md:text-base font-bold leading-tight"
+                >
+                  Environment Day
+                </h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section - Streamlined for mobile -->
+    <section id="contact" class="py-12 md:py-20 bg-slate-100">
+      <div class="container mx-auto px-4 md:px-12">
+        <div
+          class="bg-white rounded-2xl md:rounded-3xl shadow-xl overflow-hidden"
+        >
+          <div class="grid lg:grid-cols-2">
+            <!-- Contact Info -->
+            <div class="p-6 md:p-12 space-y-6 md:space-y-10">
+              <div>
+                <h3
+                  class="text-2xl md:text-4xl font-serif font-bold text-slate-900 leading-tight"
+                >
+                  Get In Touch
+                </h3>
+              </div>
+
+              <div class="space-y-4 md:space-y-6">
+                <a
+                  href="tel:+97778501xxx"
+                  class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-gkes-50 transition-colors group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gkes-900 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900">Call Us</p>
+                    <p class="text-slate-600 text-sm">+977-78-501xxx</p>
+                  </div>
+                </a>
+                <a
+                  href="mailto:info@gkes.edu.np"
+                  class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-gkes-50 transition-colors group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gkes-900 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900">Email Us</p>
+                    <p class="text-slate-600 text-sm">info@gkes.edu.np</p>
+                  </div>
+                </a>
+                <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl">
+                  <div
+                    class="w-12 h-12 bg-gkes-900 rounded-xl flex items-center justify-center text-white flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900">Visit Us</p>
+                    <p class="text-slate-600 text-sm">
+                      Gaindakot-8, Nawalpur, Nepal
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="flex gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100034847426305"
+                  target="_blank"
+                  class="w-11 h-11 bg-slate-100 rounded-xl flex items-center justify-center text-gkes-900 hover:bg-gkes-900 hover:text-white transition-all"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Map Area - Embedded Google Map -->
+            <div class="bg-slate-50 min-h-[300px] md:min-h-[400px] relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8545.692967707877!2d84.3881835!3d27.7067123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fbf034284dc1%3A0x7cd601641d1a119f!2sGyankunja%20English%20Boarding%20School!5e1!3m2!1sen!2sus!4v1772267168858!5m2!1sen!2sus"
+                class="w-full h-full absolute inset-0 border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+              <a
+                href="https://maps.app.goo.gl/ExKFTcpkLgTKjngj6"
+                target="_blank"
+                class="absolute bottom-4 left-1/2 -translate-x-1/2 btn-primary !py-2.5 !px-5 text-sm shadow-lg"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Simplified for mobile -->
+    <footer class="bg-gkes-950 text-white pt-12 md:pt-20 pb-8 md:pb-10">
+      <div class="container mx-auto px-4 md:px-12">
+        <!-- Mobile: Compact 2-column layout -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16"
+        >
+          <div class="col-span-2 md:col-span-1 space-y-4">
+            <img
+              src="images/gkes-logo.png"
+              alt="GKES Logo"
+              class="h-14 md:h-16 brightness-0 invert"
+            />
+            <p class="text-blue-100/60 text-sm leading-relaxed">
+              Empowering students through character, skill, and excellence.
+            </p>
+            <span
+              class="inline-block px-3 py-1 border border-blue-400/30 rounded-lg text-[10px] font-bold text-blue-300 uppercase tracking-wider"
+              >Managed by GES</span
+            >
+          </div>
+          <div>
+            <h5 class="font-bold mb-4 text-blue-100">Quick Links</h5>
+            <ul class="space-y-2 text-blue-100/60 text-sm">
+              <li>
+                <a href="#home" class="hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#message" class="hover:text-white transition-colors"
+                  >Principal</a
+                >
+              </li>
+              <li>
+                <a href="#academics" class="hover:text-white transition-colors"
+                  >Academics</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-bold mb-4 text-blue-100">Contact</h5>
+            <ul class="space-y-2 text-blue-100/60 text-sm">
+              <li>Gaindakot-8, Nawalpur</li>
+              <li>+977-78-501xxx</li>
+              <li>info@gkes.edu.np</li>
+            </ul>
+          </div>
+          <div class="col-span-2 md:col-span-1">
+            <h5 class="font-bold mb-4 text-blue-100">School Events</h5>
+            <ul class="space-y-2 text-blue-100/60 text-sm">
+              <li>
+                <a
+                  href="events/sports-day-2082.html"
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  ><span class="w-1 h-1 bg-blue-400 rounded-full"></span> Sports
+                  Day 2082</a
+                >
+              </li>
+              <li>
+                <a
+                  href="events/saraswati-puja.html"
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  ><span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                  Saraswati Puja</a
+                >
+              </li>
+              <li>
+                <a
+                  href="events/asadh-15.html"
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  ><span class="w-1 h-1 bg-blue-400 rounded-full"></span> Asadh
+                  15</a
+                >
+              </li>
+              <li>
+                <a
+                  href="events/krishna-janmashtami.html"
+                  class="hover:text-white transition-colors flex items-center gap-2"
+                  ><span class="w-1 h-1 bg-blue-400 rounded-full"></span>
+                  Krishna Janmashtami</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-blue-100/40"
+        >
+          <p class="uppercase tracking-wider font-bold">
+            &copy; 2026 Gyankunja English School.
+          </p>
+          <p class="text-blue-100/50">
+            Developed & maintained by
+            <a
+              href="https://serene.com.np/"
+              target="_blank"
+              class="text-blue-300 hover:text-white transition-colors font-semibold"
+              >Serene Aryal</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
