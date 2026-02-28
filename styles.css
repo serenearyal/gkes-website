@@ -41,7 +41,7 @@
 
 /* Hero Section */
 .hero-section {
-    background-image: linear-gradient(rgba(23, 37, 84, 0.75), rgba(23, 37, 84, 0.85)), url('gkes-poster.jpg');
+    background-image: linear-gradient(rgba(23, 37, 84, 0.75), rgba(23, 37, 84, 0.85)), url('images/gkes-poster.jpg');
     background-size: cover;
     background-position: center;
 }
