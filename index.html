@@ -218,13 +218,8 @@
           Nurturing young minds with quality education, strong values, and a
           vision for the future.
         </p>
-        <div
-          class="pt-6 md:pt-10 flex flex-col sm:flex-row justify-center gap-3 md:gap-5"
-        >
+        <div class="pt-6 md:pt-10">
           <a href="#about" class="btn-white !py-3 md:!py-4">Discover More</a>
-          <a href="#contact" class="btn-outline-white !py-3 md:!py-4"
-            >Apply Now</a
-          >
         </div>
       </div>
 
@@ -730,18 +725,21 @@
     <!-- Events Section -->
     <section id="events" class="py-12 md:py-20 bg-white">
       <div class="container mx-auto px-4 md:px-12">
-        <div class="mb-8 md:mb-14">
-          <span
-            class="text-gkes-800 font-bold tracking-[0.2em] uppercase text-xs mb-3 block"
-            >School Life</span
-          >
-          <h3 class="text-2xl md:text-4xl font-serif font-bold text-slate-900">
-            School Events
-          </h3>
+        <div class="flex items-end justify-between mb-8 md:mb-14">
+          <div>
+            <span class="text-gkes-800 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">School Life</span>
+            <h3 class="text-2xl md:text-4xl font-serif font-bold text-slate-900">School Events</h3>
+          </div>
+          <div class="flex items-center gap-1.5 md:gap-2 text-slate-500 text-xs md:text-sm">
+            <span class="hidden sm:inline">Scroll to explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
         </div>
 
         <!-- Events Horizontal Scroll -->
-        <div class="overflow-x-auto scrollbar-hide -mx-4 px-4">
+        <div class="overflow-x-auto events-scroll -mx-4 px-4 pb-4 relative">
           <div class="flex gap-4 pb-4" style="width: max-content">
             <a
               href="events/sports-day-2082.html"
