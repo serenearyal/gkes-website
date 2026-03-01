@@ -1,4 +1,4 @@
-/* GKES Website Interactivity */
+/* Gyankunja School Website Interactivity */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle logic
@@ -95,6 +95,58 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
+    }
+
+    // Events horizontal scroll arrows (both directions)
+    const eventsScroll = document.getElementById('eventsScroll');
+    const eventsScrollPrev = document.getElementById('eventsScrollPrev');
+    const eventsScrollNext = document.getElementById('eventsScrollNext');
+
+    if (eventsScroll && eventsScrollPrev && eventsScrollNext) {
+        const updateEventsArrowVisibility = () => {
+            const isDesktop = window.innerWidth >= 1024;
+            const maxScroll = eventsScroll.scrollWidth - eventsScroll.clientWidth;
+            const atStart = eventsScroll.scrollLeft <= 4;
+            const atEnd = maxScroll - eventsScroll.scrollLeft <= 4;
+            const canScroll = maxScroll > 8;
+
+            // On mobile/tablet always show arrows, on desktop only if we can scroll
+            if (!isDesktop || canScroll) {
+                eventsScrollPrev.classList.remove('hidden');
+                eventsScrollNext.classList.remove('hidden');
+            } else {
+                eventsScrollPrev.classList.add('hidden');
+                eventsScrollNext.classList.add('hidden');
+            }
+
+            // Dim and disable when at the edges
+            if (atStart) {
+                eventsScrollPrev.classList.add('opacity-40', 'pointer-events-none');
+            } else {
+                eventsScrollPrev.classList.remove('opacity-40', 'pointer-events-none');
+            }
+
+            if (atEnd) {
+                eventsScrollNext.classList.add('opacity-40', 'pointer-events-none');
+            } else {
+                eventsScrollNext.classList.remove('opacity-40', 'pointer-events-none');
+            }
+        };
+
+        const scrollByAmount = (direction) => {
+            const scrollAmount = eventsScroll.offsetWidth * 0.8 * direction;
+            eventsScroll.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth',
+            });
+        };
+
+        eventsScrollPrev.addEventListener('click', () => scrollByAmount(-1));
+        eventsScrollNext.addEventListener('click', () => scrollByAmount(1));
+
+        eventsScroll.addEventListener('scroll', updateEventsArrowVisibility);
+        window.addEventListener('resize', updateEventsArrowVisibility);
+        updateEventsArrowVisibility();
     }
 
     // Smooth scroll reveal observer (desktop only for performance)
